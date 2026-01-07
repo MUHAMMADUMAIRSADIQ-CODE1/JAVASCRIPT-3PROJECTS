@@ -1,0 +1,49 @@
+  body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+  }
+
+  .password-box {
+      position: relative;
+      width: 300px;
+  }
+
+  input[type="password"],
+  input[type="text"] {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+  }
+
+  input:focus {
+      border-color: #667eea;
+  }
+
+  .toggle-eye {
+      position: absolute;
+      right: -45px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #666;
+      transition: color 0.3s;
+  }
+
+  .toggle-eye:hover {
+      color: #000;
+  }
+
+  input[type="password"]::-ms-reveal,
+  input[type="password"]::-ms-clear {
+      display: none;
+  }
