@@ -12,3 +12,7 @@ btn2.addEventListener("click", () => {
     count--;
     div.textContent = count;
 });
+btn3.addEventListener("click", () => {
+    count = 0;
+    div.textContent = count;
+});
