@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+
+}
+
+.wholecontainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main App Box */
+.container {
+    background: #fff;
+    width: 360px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+.container h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Inputs */
+.container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.container input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Add Button */
+.container button {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.container button:hover {
+    background: #5a67d8;
+}
+
+/* Expense List */
+.container ul {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.container ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    background: #f5f5f5;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Delete Button */
+.Dbt {
+    background: #e53e3e;
+    border: none;
+    color: #fff;
+    padding: 5px 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 30% !important;
+    margin-bottom: 0px !important;
+}
+
+.Dbt:hover {
+    background: #c53030;
+}
+
+/* Total */
+#total {
+    font-weight: bold;
+    color: #333;
+}
+
+.total-box {
+    text-align: center;
+    font-size: 16px;
+}
+
+li {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+li h3,
+li p {
+    display: inline;
+}
+
+.h3 {
+    text-align: center;
+    margin: 2px;
+    color: red;
+}
+
+.divfullpage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.div {
+    background: #fff;
+    width: 280px;
+    padding: 20px;
+
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+    animation: popupScale 0.3s ease;
+}
+
+@keyframes popupScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.div #btn1 {
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background: #667eea;
+}
+
+
+.div #btn2 {
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background: #c53030;
+}
+
+.flex-div {
+    display: flex;
+    margin-top: 20px;
+    gap: 15px;
+    justify-content: center;
+}
