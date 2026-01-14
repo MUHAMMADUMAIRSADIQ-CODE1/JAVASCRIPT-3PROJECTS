@@ -18,7 +18,7 @@ body {
     align-items: center;
 }
 
-/* Main App Box */
+
 .container {
     background: #fff;
     width: 360px;
@@ -27,14 +27,13 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Heading */
 .container h1 {
     text-align: center;
     margin-bottom: 15px;
     color: #333;
 }
 
-/* Inputs */
+
 .container input {
     width: 100%;
     padding: 10px;
@@ -49,7 +48,7 @@ body {
     border-color: #667eea;
 }
 
-/* Add Button */
+
 .container button {
     width: 100%;
     padding: 10px;
@@ -66,7 +65,7 @@ body {
     background: #5a67d8;
 }
 
-/* Expense List */
+
 .container ul {
     list-style: none;
     max-height: 200px;
@@ -85,7 +84,7 @@ body {
     font-size: 14px;
 }
 
-/* Delete Button */
+
 .Dbt {
     background: #e53e3e;
     border: none;
@@ -102,7 +101,7 @@ body {
     background: #c53030;
 }
 
-/* Total */
+
 #total {
     font-weight: bold;
     color: #333;
