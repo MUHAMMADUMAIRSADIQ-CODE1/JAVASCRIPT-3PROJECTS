@@ -5,6 +5,9 @@ let button = document.querySelector("button");
 let ul = document.querySelector("ul");
 let span = document.querySelector("#total");
 let h3 = document.querySelector("h3");
+let index;
+let list;
+let div = document.querySelector(".divfullpage");
 let expenses = [];
 function expenseAdd() {
     let namevalue = expensename.value;
@@ -33,35 +36,33 @@ function calculateTotal() {
 function deletebtn() {
     let dbt = document.querySelectorAll(".Dbt")
 
-    dbt.forEach((item, index) => {
-        if (!item.dataset.listener) {
-            item.addEventListener("click", (e) => {
-                let div = document.querySelector(".divfullpage");
-                div.style.display = "flex"
-                let btn1 = document.querySelector("#btn1")
-                let btn2 = document.querySelector("#btn2")
-                console.log(expenses)
-                btn1.addEventListener("click", () => {
-                    console.log(expenses)
-                    div.style.display = "none"
-                    e.target.parentElement.remove()
-                    console.log("1", index)
-                    expenses.splice(index, 1)
-                    calculateTotal()
-                    console.log("hs", expenses)
-                })
-                btn2.addEventListener("click", () => {
-                    div.style.display = "none"
-                })
+    dbt.forEach((item) => {
 
-            })
-            item.dataset.listener = "true";
-        }
+        item.addEventListener("click", (e) => {
+
+            div.style.display = "flex"
+            let btn1 = document.querySelector("#btn1")
+            let btn2 = document.querySelector("#btn2")
+            list = document.querySelectorAll("li")
+            index = Array.from(list).indexOf(e.target.parentElement)
+        })
+
+
     })
 }
+btn1.addEventListener("click", () => {
+    div.style.display = "none"
+    list[index].remove()
+    expenses.splice(index, 1)
+    calculateTotal()
+})
+btn2.addEventListener("click", () => {
+    div.style.display = "none"
+})
 
 button.addEventListener("click", () => {
     expenseAdd();
     calculateTotal()
     deletebtn()
+
 })
